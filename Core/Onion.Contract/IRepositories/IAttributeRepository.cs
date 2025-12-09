@@ -10,6 +10,6 @@ namespace Onion.Contract.IRepositories
     public interface IAttributeRepository
     {
         Task<int> CreateAttributeAsync(EntityAttribute attribute);
-        Task<List<EntityAttribute>> GetAttributesForEntityTypeAsync(string entityType);
+        Task<List<EntityAttribute>> GetAttributesForEntityTypeAsync(string entityName);
     }
 }

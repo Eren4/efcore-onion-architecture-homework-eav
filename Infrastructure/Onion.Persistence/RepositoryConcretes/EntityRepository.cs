@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Onion.Contract.IRepositories;
+﻿using Onion.Contract.IRepositories;
 using Onion.Domain.Models;
 using Onion.Persistence.ContextClasses;
 
@@ -25,16 +20,16 @@ namespace Onion.Persistence.RepositoryConcretes
                 EntityName = entityName
             };
 
-            _context.Entities.Add(e);
+            _context.Entities.Add(entity);
 
             await _context.SaveChangesAsync();
 
-            return e.EntityId;
+            return entity.EntityId;
         }
 
-        public Task<Entity> GetEntityAsync(int entityId)
+        public async Task<Entity> GetEntityAsync(int entityId)
         {
-            throw new NotImplementedException();
+            return await _context.Entities.FindAsync(entityId);
         }
     }
 }
