@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36616.10 d17.14
+VisualStudioVersion = 17.14.36616.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.InnerInfrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Persistence", "Infrastructure\Onion.Persistence\Onion.Persistence.csproj", "{BFCDE441-8803-40BA-912D-A83B943472E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.WebApi", "Onion.WebApi\Onion.WebApi.csproj", "{912002B9-8264-4A81-837A-06ACD71F5B82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.WebApi", "Presentation\Onion.WebApi\Onion.WebApi.csproj", "{0C17BE82-E4D9-440B-AD0F-CA94AC966532}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{BFCDE441-8803-40BA-912D-A83B943472E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFCDE441-8803-40BA-912D-A83B943472E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFCDE441-8803-40BA-912D-A83B943472E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{912002B9-8264-4A81-837A-06ACD71F5B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{912002B9-8264-4A81-837A-06ACD71F5B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{912002B9-8264-4A81-837A-06ACD71F5B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{912002B9-8264-4A81-837A-06ACD71F5B82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C17BE82-E4D9-440B-AD0F-CA94AC966532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C17BE82-E4D9-440B-AD0F-CA94AC966532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C17BE82-E4D9-440B-AD0F-CA94AC966532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C17BE82-E4D9-440B-AD0F-CA94AC966532}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,7 +61,7 @@ Global
 		{A72CE618-D89F-4514-B3DE-91D8E0DCB1B8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{D67E3243-32E4-481E-96C6-7E787E7AB395} = {C44F2DC0-442D-410D-8C07-290284ED18CF}
 		{BFCDE441-8803-40BA-912D-A83B943472E0} = {C44F2DC0-442D-410D-8C07-290284ED18CF}
-		{912002B9-8264-4A81-837A-06ACD71F5B82} = {CD38F20D-E601-4D63-A12F-9A6CA2C2C82C}
+		{0C17BE82-E4D9-440B-AD0F-CA94AC966532} = {CD38F20D-E601-4D63-A12F-9A6CA2C2C82C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B5849AA-1059-4032-B454-4B71DA60F256}
