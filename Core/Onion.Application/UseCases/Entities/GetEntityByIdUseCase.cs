@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Onion.Domain.Models
+namespace Onion.Application.UseCases.Entities
 {
-    public class Entity : BaseEntity
+    internal class GetEntityByIdUseCase
     {
-        public string EntityName { get; set; }
     }
 }

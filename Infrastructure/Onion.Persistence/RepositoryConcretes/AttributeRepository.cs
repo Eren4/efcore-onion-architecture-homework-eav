@@ -10,11 +10,11 @@ using Onion.Persistence.ContextClasses;
 
 namespace Onion.Persistence.RepositoryConcretes
 {
-    public class AttributeRepository : IAttributeRepository
+    public class AttributeRepository : BaseRepository<EntityAttribute>, IAttributeRepository
     {
         private readonly MyContext _context;
 
-        public AttributeRepository(MyContext context)
+        public AttributeRepository(MyContext context) : base(context)
         {
             _context = context;
         }
@@ -26,7 +26,7 @@ namespace Onion.Persistence.RepositoryConcretes
             return _context.SaveChangesAsync().ContinueWith(t => attribute.AttributeId);
         }
 
-        public Task<List<EntityAttribute>> GetAttributesForEntityTypeAsync(string entityName)
+        public Task<List<EntityAttribute>> GetAttributesForEntityNameAsync(string entityName)
         {
             return _context.EntityAttributes
                 .Where(a => a.Entity.EntityName == entityName)

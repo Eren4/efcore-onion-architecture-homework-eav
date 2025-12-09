@@ -7,9 +7,9 @@ using Onion.Domain.Models;
 
 namespace Onion.Contract.IRepositories
 {
-    public interface IAttributeValueRepository
+    public interface IAttributeValueRepository : IRepository<AttributeValue>
     {
         Task CreateOrUpdateValueAsync(int entityId, int attributeId, string value);
-        Task<List<AttributeValue>> GetValuesForEntityAsync(int entityId);
+        Task<List<AttributeValue>> GetValuesForEntityIdAsync(int entityId);
     }
 }

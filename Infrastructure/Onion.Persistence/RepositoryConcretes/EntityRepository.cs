@@ -4,11 +4,11 @@ using Onion.Persistence.ContextClasses;
 
 namespace Onion.Persistence.RepositoryConcretes
 {
-    public class EntityRepository : IEntityRepository
+    public class EntityRepository : BaseRepository<Entity>, IEntityRepository
     {
         private readonly MyContext _context;
 
-        public EntityRepository(MyContext context)
+        public EntityRepository(MyContext context) : base(context)
         {
             _context = context;
         }
@@ -27,7 +27,7 @@ namespace Onion.Persistence.RepositoryConcretes
             return entity.EntityId;
         }
 
-        public async Task<Entity> GetEntityAsync(int entityId)
+        public async Task<Entity> GetEntityByIdAsync(int entityId)
         {
             return await _context.Entities.FindAsync(entityId);
         }

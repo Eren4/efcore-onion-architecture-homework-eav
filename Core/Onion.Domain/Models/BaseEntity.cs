@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Onion.Domain.Models
 {
-    public class Entity : BaseEntity
+    public class BaseEntity
     {
-        public string EntityName { get; set; }
+        public int Id { get; set; }
     }
 }

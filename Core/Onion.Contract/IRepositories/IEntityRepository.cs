@@ -7,9 +7,9 @@ using Onion.Domain.Models;
 
 namespace Onion.Contract.IRepositories
 {
-    public interface IEntityRepository
+    public interface IEntityRepository : IRepository<Entity>
     {
         Task<int> CreateEntityAsync(string entityName);
-        Task<Entity> GetEntityAsync(int entityId);
+        Task<Entity> GetEntityByIdAsync(int entityId);
     }
 }

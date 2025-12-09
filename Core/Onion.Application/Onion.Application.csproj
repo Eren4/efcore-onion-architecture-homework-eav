@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\Attributes\" />
+    <Folder Include="UseCases\AttributeValues\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Onion.Contract\Onion.Contract.csproj" />
+  </ItemGroup>
+
 </Project>

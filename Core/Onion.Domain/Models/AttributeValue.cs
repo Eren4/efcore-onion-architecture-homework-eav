@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Onion.Domain.Models
 {
-    public class AttributeValue
+    public class AttributeValue : BaseEntity
     {
-        public int AttributeValueId { get; set; }
         public int EntityId { get; set; }
         public int AttributeId { get; set; }
         public string Value { get; set; }

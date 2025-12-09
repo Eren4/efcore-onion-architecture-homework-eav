@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Onion.Domain.Models
+namespace Onion.Contract.IRepositories
 {
-    public class Entity : BaseEntity
+    public interface IRepository<T> where T : class
     {
-        public string EntityName { get; set; }
+        Task<List<T>> GetAllAsync();
     }
 }
