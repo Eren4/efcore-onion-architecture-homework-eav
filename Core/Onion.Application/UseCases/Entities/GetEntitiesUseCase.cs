@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Onion.Application.DTOs.Entities;
+using Onion.Application.IUseCases.Entities;
 using Onion.Contract.IRepositories;
+using Onion.Domain.Models;
 
 namespace Onion.Application.UseCases.Entities
 {
-    public class GetEntitiesUseCase
+    public class GetEntitiesUseCase : IGetEntitiesUseCase
     {
         private readonly IEntityRepository _repository;
 
@@ -16,8 +14,15 @@ namespace Onion.Application.UseCases.Entities
             _repository = repository;
         }
 
-        public Task<int> ExecuteAsync(string entityType)
+        public async Task<List<EntityResultDTO>> ExecuteAsync()
         {
+            List<Entity> values = await _repository.GetAllAsync();
+
+            return values.Select(x => new EntityResultDTO
+            {
+                Id = x.Id,
+                EntityName = x.EntityName
+            }).ToList();
         }
     }
 }

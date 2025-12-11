@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Onion.Contract.IUseCases.AttributeValues
+namespace Onion.Application.IUseCases.AttributeValues
 {
     public interface ICreateAttributeValueUseCase
     {

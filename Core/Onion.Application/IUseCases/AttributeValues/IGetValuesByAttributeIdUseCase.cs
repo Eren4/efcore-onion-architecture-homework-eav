@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Onion.Application.DTOs.Values;
 using Onion.Domain.Models;
 
-namespace Onion.Contract.IUseCases.AttributeValues
+namespace Onion.Application.IUseCases.AttributeValues
 {
     public interface IGetValuesByAttributeIdUseCase
     {
-        public Task<List<AttributeValue>> ExecuteAsync(int attributeId);
+        public Task<List<ValueResultDTO>> ExecuteAsync(int attributeId);
     }
 }

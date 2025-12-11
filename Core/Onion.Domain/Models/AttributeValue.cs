@@ -8,12 +8,12 @@ namespace Onion.Domain.Models
 {
     public class AttributeValue : BaseEntity
     {
-        public int EntityId { get; set; }
-        public int AttributeId { get; set; }
+        public int? EntityId { get; set; }
+        public int? AttributeId { get; set; }
         public string Value { get; set; }
 
         // Relational fields
-        public Entity Entity { get; set; }
-        public EntityAttribute Attribute { get; set; }
+        public virtual Entity Entity { get; set; }
+        public virtual EntityAttribute EntityAttribute { get; set; }
     }
 }

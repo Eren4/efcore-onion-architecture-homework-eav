@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Onion.Contract.IUseCases.Entities
+namespace Onion.Application.IUseCases.Entities
 {
     public interface ICreateEntityUseCase
     {
-        Task<int> ExecuteAsync(string entityName);
+        Task ExecuteAsync(string entityName);
     }
 }

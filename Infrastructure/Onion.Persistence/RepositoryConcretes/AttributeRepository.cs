@@ -23,14 +23,14 @@ namespace Onion.Persistence.RepositoryConcretes
         {
             _context.EntityAttributes.Add(attribute);
 
-            return _context.SaveChangesAsync().ContinueWith(t => attribute.AttributeId);
+            return _context.SaveChangesAsync().ContinueWith(t => attribute.Id);
         }
 
         public Task<List<EntityAttribute>> GetAttributesForEntityNameAsync(string entityName)
         {
-            return _context.EntityAttributes
-                .Where(a => a.Entity.EntityName == entityName)
-                .ToListAsync();
+            Entity entity = _context.Entities.Where(e => e.EntityName == entityName).FirstOrDefault();
+
+            return Task.FromResult(entity.EntityAttributes);
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Onion.Persistence.RepositoryConcretes
 
             await _context.SaveChangesAsync();
 
-            return entity.EntityId;
+            return entity.Id;
         }
 
         public async Task<Entity> GetEntityByIdAsync(int entityId)

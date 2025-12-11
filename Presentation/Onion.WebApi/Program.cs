@@ -1,3 +1,5 @@
+using Onion.Application.DependencyResolvers;
+using Onion.Persistence.DependencyResolvers;
 
 namespace Onion.WebApi
 {
@@ -10,6 +12,10 @@ namespace Onion.WebApi
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddDTOMapperService();
+            builder.Services.AddDbContextService();
+            builder.Services.AddUseCaseServices();
+            builder.Services.AddRepositoryServices();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

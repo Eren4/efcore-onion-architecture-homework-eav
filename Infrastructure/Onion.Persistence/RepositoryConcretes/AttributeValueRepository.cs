@@ -37,7 +37,7 @@ namespace Onion.Persistence.RepositoryConcretes
                     EntityId = entityId,
 
                     Entity = entity,
-                    Attribute = attribute
+                    EntityAttribute = attribute
                 };
 
                 _context.AttributeValues.Add(attributeValue1);
