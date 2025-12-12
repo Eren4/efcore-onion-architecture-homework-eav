@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Onion.Domain.Models
+namespace Onion.Application.DTOs.Values
 {
-    public class AttributeValue : BaseEntity
+    public class CreateValueDTO
     {
         public int EntityId { get; set; }
         public int AttributeId { get; set; }
         public string Value { get; set; }
-
-        // Relational fields
-        public virtual Entity Entity { get; set; }
-        public virtual EntityAttribute EntityAttribute { get; set; }
     }
 }

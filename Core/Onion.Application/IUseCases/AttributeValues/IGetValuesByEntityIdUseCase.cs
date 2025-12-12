@@ -8,8 +8,8 @@ using Onion.Domain.Models;
 
 namespace Onion.Application.IUseCases.AttributeValues
 {
-    public interface IGetValuesByAttributeIdUseCase
+    public interface IGetValuesByEntityIdUseCase
     {
-        public Task<List<ValueResultDTO>> ExecuteAsync(int attributeId);
+        public Task<List<ValueResultDTO>> ExecuteAsync(int entityId);
     }
 }
