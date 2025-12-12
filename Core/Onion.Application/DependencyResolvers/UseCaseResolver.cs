@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
+using Onion.Application.IUseCases.Attributes;
 using Onion.Application.IUseCases.AttributeValues;
 using Onion.Application.IUseCases.Entities;
+using Onion.Application.UseCases.Attributes;
 using Onion.Application.UseCases.Entities;
 
 namespace Onion.Application.DependencyResolvers
@@ -18,8 +20,9 @@ namespace Onion.Application.DependencyResolvers
             services.AddScoped<IGetEntitiesUseCase, GetEntitiesUseCase>();
             services.AddScoped<ICreateEntityUseCase, CreateEntityUseCase>();
 
-            // services.AddScoped<ICreateAttributeValueUseCase, CreateAttributeValueUseCase>();
-            // services.AddScoped<IGetValuesByAttributeIdUseCase, GetValuesByAttributeIdUseCase>();
+            services.AddScoped<ICreateAttributeUseCase, CreateAttributeUseCase>();
+            services.AddScoped<IGetAttributesByEntityIdUseCase, GetAttributesByEntityIdUseCase>();
+            services.AddScoped<IGetAttributesUseCase, GetAttributesUseCase>();
         }
     }
 }

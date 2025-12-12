@@ -19,16 +19,28 @@ namespace Onion.Persistence.RepositoryConcretes
             _context = context;
         }
 
-        public Task<int> CreateAttributeAsync(EntityAttribute attribute)
+        public Task CreateAttributeAsync(int entityId, string attributeName, string dataType)
         {
+            Entity attributeEntity = _context.Entities.Find(entityId);
+
+            EntityAttribute attribute = new EntityAttribute()
+            {
+                AttributeName = attributeName,
+                DataType = dataType,
+                EntityId = entityId,
+
+                Entity = attributeEntity,
+                AttributeValues = new List<AttributeValue>()
+            };
+
             _context.EntityAttributes.Add(attribute);
 
             return _context.SaveChangesAsync().ContinueWith(t => attribute.Id);
         }
 
-        public Task<List<EntityAttribute>> GetAttributesForEntityNameAsync(string entityName)
+        public Task<List<EntityAttribute>> GetAttributesForEntityIdAsync(int entityId)
         {
-            Entity entity = _context.Entities.Where(e => e.EntityName == entityName).FirstOrDefault();
+            Entity entity = _context.Entities.Where(e => e.Id == entityId).FirstOrDefault();
 
             return Task.FromResult(entity.EntityAttributes);
         }

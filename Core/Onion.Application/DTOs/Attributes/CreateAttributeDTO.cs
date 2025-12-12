@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Onion.Application.DTOs.Attributes
 {
-    public class AttributeResultDTO
+    public class CreateAttributeDTO
     {
-        public int Id { get; set; }
         public int EntityId { get; set; }
         public string AttributeName { get; set; }
         public string DataType { get; set; }

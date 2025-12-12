@@ -10,6 +10,6 @@ namespace Onion.Application.IUseCases.Attributes
 {
     public interface IGetAttributesByEntityIdUseCase
     {
-        public List<Task<AttributeResultDTO>> ExecuteAsync(int entityId);
+        public Task<List<AttributeResultDTO>> ExecuteAsync(int entityId);
     }
 }

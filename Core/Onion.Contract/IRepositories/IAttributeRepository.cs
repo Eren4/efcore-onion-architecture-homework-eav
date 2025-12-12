@@ -9,7 +9,7 @@ namespace Onion.Contract.IRepositories
 {
     public interface IAttributeRepository : IRepository<EntityAttribute>
     {
-        Task<int> CreateAttributeAsync(EntityAttribute attribute);
-        Task<List<EntityAttribute>> GetAttributesForEntityNameAsync(string entityName);
+        Task CreateAttributeAsync(int entityId, string attributeName, string dataType);
+        Task<List<EntityAttribute>> GetAttributesForEntityIdAsync(int entityId);
     }
 }

@@ -8,6 +8,6 @@ namespace Onion.Application.IUseCases.AttributeValues
 {
     public interface ICreateAttributeValueUseCase
     {
-        public Task<int> ExecuteAsync(int entityId, int attributeId, string value);
+        public Task ExecuteAsync(int entityId, int attributeId, string value);
     }
 }

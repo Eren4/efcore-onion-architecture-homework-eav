@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\Attributes\" />
     <Folder Include="UseCases\AttributeValues\" />
   </ItemGroup>
 

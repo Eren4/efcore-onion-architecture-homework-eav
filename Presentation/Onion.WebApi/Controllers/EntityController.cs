@@ -29,7 +29,7 @@ namespace Onion.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetEntityById([FromBody] int id)
+        public async Task<IActionResult> GetEntityById(int id)
         {
             EntityResultDTO result = await _getEntityByIdUseCase.ExecuteAsync(id);
 
@@ -37,7 +37,7 @@ namespace Onion.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateEntity([FromBody] string name)
+        public async Task<IActionResult> CreateEntity(string name)
         {
             await _createEntityUseCase.ExecuteAsync(name);
 

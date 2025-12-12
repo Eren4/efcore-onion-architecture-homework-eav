@@ -10,6 +10,6 @@ namespace Onion.Application.IUseCases.Attributes
 {
     public interface IGetAttributesUseCase
     {
-        public List<Task<AttributeResultDTO>> ExecuteAsync();
+        public Task<List<AttributeResultDTO>> ExecuteAsync();
     }
 }
